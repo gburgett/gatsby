@@ -12,9 +12,6 @@ import PQueue from "p-queue"
 export default class FFMPEG {
   constructor({ rootDir, ffmpegPath, ffprobePath }) {
     this.queue = new PQueue({ concurrency: 1 })
-    this.cacheDir = resolve(
-      `${rootDir}/node_modules/.cache/gatsby-transformer-video/`
-    )
     this.rootDir = rootDir
 
     if (ffmpegPath) {
